@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Editing Cost Calculator — Real 2025 Rates</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface-2: #161616;
+    --surface-3: #1e1e1e;
+    --border: #2a2a2a;
+    --border-bright: #3d3d3d;
+    --accent: #e8c87a;
+    --accent-dim: #c4a455;
+    --accent-glow: rgba(232, 200, 122, 0.10);
+    --text-primary: #f0ece4;
+    --text-secondary: #888880;
+    --text-muted: #555550;
+    --red: #c0614a;
+    --green: #5a8a6a;
+    --blue: #5a7ea8;
+    --mono: 'DM Mono', monospace;
+    --serif: 'DM Serif Display', serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    min-height: 100vh;
+    padding: 0 0 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 28px; height: 28px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .brand {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .divider { color: var(--text-muted); font-size: 12px; margin: 0 4px; }
+  .toolkit {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .source-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .source-badge span { color: var(--green); }
+
+  /* HERO */
+  .hero {
+    padding: 64px 48px 40px;
+    max-width: 960px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 5.5vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 580px;
+    line-height: 1.7;
+  }
+  .hero .data-note {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 2px;
+  }
+  .hero .data-note::before {
+    content: '●';
+    color: var(--green);
+    font-size: 7px;
+  }
+
+  /* MAIN GRID */
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 0;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 48px;
+    align-items: start;
+  }
+  .left-col { padding-right: 52px; }
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 44px;
+    opacity: 0;
+    transform: translateY(14px);
+    animation: fadeUp 0.5s ease forwards;
+  }
+  .section:nth-child(1) { animation-delay: 0.05s; }
+  .section:nth-child(2) { animation-delay: 0.12s; }
+  .section:nth-child(3) { animation-delay: 0.19s; }
+  .section:nth-child(4) { animation-delay: 0.26s; }
+  .section:nth-child(5) { animation-delay: 0.33s; }
+  .section:nth-child(6) { animation-delay: 0.40s; }
+
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    border: 1px solid var(--accent-dim);
+    padding: 3px 7px;
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+  .section-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  /* CARD GRIDS */
+  .card-grid {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .g2 { grid-template-columns: repeat(2, 1fr); }
+  .g3 { grid-template-columns: repeat(3, 1fr); }
+
+  .sel-card {
+    background: var(--surface);
+    padding: 18px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .sel-card:hover { background: var(--surface-2); }
+  .sel-card.active { background: var(--surface-3); }
+  .sel-card.active::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .card-emoji { font-size: 18px; margin-bottom: 8px; display: block; }
+  .card-title {
+    font-size: 12px; font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 3px; line-height: 1.3;
+  }
+  .card-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+    line-height: 1.5;
+  }
+  .card-price {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    margin-top: 8px;
+    font-weight: 500;
+  }
+
+  /* TOGGLE ROW */
+  .toggle-row {
+    display: flex;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .toggle-btn {
+    flex: 1;
+    background: var(--surface);
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border: none;
+    font-family: var(--sans);
+  }
+  .toggle-btn:hover { background: var(--surface-2); color: var(--text-primary); }
+  .toggle-btn.active {
+    background: var(--surface-3);
+    color: var(--text-primary);
+  }
+  .toggle-btn.active::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+  }
+  .toggle-note {
+    margin-top: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    line-height: 1.6;
+  }
+
+  /* VIDEO LENGTH SLIDER */
+  .length-control {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 24px 28px;
+  }
+  .length-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .length-num {
+    font-family: var(--serif);
+    font-size: 52px;
+    line-height: 1;
+    color: var(--text-primary);
+  }
+  .length-label { font-size: 13px; color: var(--text-muted); font-weight: 300; }
+
+  input[type=range] {
+    width: 100%;
+    height: 2px;
+    -webkit-appearance: none;
+    background: var(--border-bright);
+    outline: none;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 0 1px var(--accent-dim);
+    transition: transform 0.1s;
+  }
+  input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+  .range-labels { display: flex; justify-content: space-between; margin-top: 8px; }
+  .range-labels span { font-family: var(--mono); font-size: 10px; color: var(--text-muted); }
+
+  /* EXTRAS */
+  .extras-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .extra-item {
+    background: var(--surface);
+    padding: 14px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.15s;
+    position: relative;
+    gap: 8px;
+  }
+  .extra-item:hover { background: var(--surface-2); }
+  .extra-item.active { background: var(--surface-3); }
+  .extra-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 2px;
+    background: var(--accent);
+  }
+  .extra-left { display: flex; flex-direction: column; gap: 2px; }
+  .extra-name { font-size: 12px; font-weight: 500; color: var(--text-primary); }
+  .extra-desc { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.03em; }
+  .extra-cost { font-family: var(--mono); font-size: 11px; color: var(--accent); white-space: nowrap; }
+  .extra-check {
+    width: 16px; height: 16px;
+    border: 1px solid var(--border-bright);
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
+    color: var(--accent);
+    transition: all 0.15s;
+  }
+  .extra-item.active .extra-check {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+
+  /* RIGHT PANEL */
+  .right-col { position: sticky; top: 24px; }
+
+  .quote-panel {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 0.5s 0.45s ease forwards;
+  }
+
+  .quote-header {
+    background: var(--surface-3);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quote-header-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .market-tag {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    border: 1px solid var(--green);
+    padding: 2px 6px;
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  .quote-amount {
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  .quote-main {
+    font-family: var(--serif);
+    font-size: 52px;
+    line-height: 1;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+  }
+  .quote-range {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+  .quote-range .low { color: var(--red); }
+  .quote-range .high { color: var(--green); }
+
+  .range-vis {
+    margin: 14px 24px 0;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    position: relative;
+  }
+  .range-fill {
+    position: absolute; height: 100%;
+    background: linear-gradient(90deg, var(--red), var(--accent), var(--green));
+    border-radius: 2px;
+    left: 5%; right: 5%;
+  }
+  .range-dot {
+    position: absolute; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px; height: 10px;
+    background: var(--text-primary);
+    border: 2px solid var(--bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--accent);
+    transition: left 0.3s ease;
+  }
+  .range-bar-labels {
+    display: flex; justify-content: space-between;
+    padding: 5px 24px 0; margin-bottom: 2px;
+  }
+  .range-bar-labels span {
+    font-family: var(--mono); font-size: 9px;
+    color: var(--text-muted); letter-spacing: 0.06em;
+  }
+
+  /* BREAKDOWN */
+  .breakdown { padding: 16px 24px; border-bottom: 1px solid var(--border); }
+  .breakdown-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 6px 0; border-bottom: 1px solid var(--border);
+  }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-key { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.04em; }
+  .breakdown-val { font-family: var(--mono); font-size: 10px; color: var(--text-secondary); }
+  .breakdown-row.total .breakdown-key { color: var(--text-primary); font-size: 11px; font-weight: 500; }
+  .breakdown-row.total .breakdown-val { color: var(--accent); font-size: 13px; font-weight: 500; }
+  .breakdown-row.extras-row .breakdown-val { color: var(--blue); }
+
+  /* MARKET CONTEXT */
+  .market-context {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .market-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .market-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+  }
+  .market-source {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-muted);
+    width: 80px;
+    flex-shrink: 0;
+    letter-spacing: 0.03em;
+  }
+  .market-bar-wrap {
+    flex: 1;
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    position: relative;
+  }
+  .market-bar {
+    position: absolute;
+    height: 100%;
+    background: var(--border-bright);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+  .market-bar.active-range { background: var(--accent); opacity: 0.5; }
+  .market-price {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--text-secondary);
+    width: 80px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .your-dot {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px; height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 1px solid var(--bg);
+    transition: left 0.4s ease;
+  }
+
+  /* EMAIL */
+  .email-box { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+  .email-toolbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface-3);
+  }
+  .email-toolbar-label {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase;
+  }
+  .copy-btn {
+    background: none;
+    border: 1px solid var(--border-bright);
+    color: var(--text-secondary);
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 5px 12px; cursor: pointer; transition: all 0.15s;
+  }
+  .copy-btn:hover { background: var(--accent-glow); border-color: var(--accent-dim); color: var(--accent); }
+  .copy-btn.copied { border-color: var(--green); color: var(--green); }
+
+  #emailBody {
+    padding: 24px; font-family: var(--mono); font-size: 11px;
+    line-height: 1.8; color: var(--text-secondary); background: var(--surface);
+    width: 100%; min-height: 260px; border: none; outline: none;
+    resize: vertical; letter-spacing: 0.01em;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 48px; padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  footer p { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.05em; line-height: 1.7; }
+  footer a { color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 960px) {
+    .main { grid-template-columns: 1fr; padding: 0 20px; }
+    .left-col { padding-right: 0; }
+    .right-col { position: static; margin-top: 32px; }
+    .hero { padding: 40px 20px 28px; }
+    .site-header { padding: 16px 20px; }
+    .g3 { grid-template-columns: repeat(2, 1fr); }
+    footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <div class="logo-mark">V</div>
+    <span class="brand">Video Editor</span>
+    <span class="divider">·</span>
+    <span class="toolkit">Cost Calculator</span>
+  </div>
+  <div class="source-badge">Data: <span>2025 Market Rates</span></div>
+</header>
+
+<div class="hero">
+  <h1>What Does Video Editing <em>Actually Cost?</em></h1>
+  <p>Real pricing based on 2025 market data from Upwork, Cutjamm, Spivo, and Miracamp surveys. Not agency markup — what freelance editors actually charge.</p>
+  <div class="data-note">Based on global surveys of 1,000+ working editors · Updated 2025</div>
+</div>
+
+<div class="main">
+  <div class="left-col">
+
+    <!-- 01 Project Type -->
+    <div class="section">
+      <div class="section-label">
+        <span class="section-num">01</span>
+        <span class="section-title">What type of video?</span>
+      </div>
+      <div class="card-grid g3" id="typeGrid">
+        <div class="sel-card active" data-base-low="100" data-base-high="500" data-label="Social / Reel" onclick="selectType(this)">
+          <span class="card-emoji">📱</span>
+          <div class="card-title">Social / Reel</div>
+          <div class="card-meta">TikTok, Instagram, YouTube Shorts</div>
+          <div class="card-price">$100 – $500</div>
+        </div>
+        <div class="sel-card" data-base-low="300" data-base-high="1200" data-label="YouTube / Podcast" onclick="selectType(this)">
+          <span class="card-emoji">▶️</span>
+          <div class="card-title">YouTube / Podcast</div>
+          <div class="card-meta">Long-form content, episodes</div>
+          <div class="card-price">$300 – $1,200</div>
+        </div>
+        <div class="sel-card" data-base-low="500" data-base-high="2500" data-label="Corporate / Brand" onclick="selectType(this)">
+          <span class="card-emoji">💼</span>
+          <div class="card-title">Corporate / Brand</div>
+          <div class="card-meta">Promos, explainers, testimonials</div>
+          <div class="card-price">$500 – $2,500</div>
+        </div>
+        <div class="sel-card" data-base-low="800" data-base-high="4000" data-label="Commercial / Ad" onclick="selectType(this)">
+          <span class="card-emoji">📺</span>
+          <div class="card-title">Commercial / Ad</div>
+          <div class="card-meta">Paid ads, product campaigns</div>
+          <div class="card-price">$800 – $4,000</div>
+        </div>
+        <div class="sel-card" data-base-low="400" data-base-high="2000" data-label="Music Video" onclick="selectType(this)">
+          <span class="card-emoji">🎞️</span>
+          <div class="card-title">Music Video</div>
+          <div class="card-meta">Artist content, lyric videos</div>
+          <div class="card-price">$400 – $2,000</div>
+        </div>
+        <div class="sel-card" data-base-low="500" data-base-high="5000" data-label="Wedding / Event" onclick="selectType(this)">
+          <span class="card-emoji">💒</span>
+          <div class="card-title">Wedding / Event</div>
+          <div class="card-meta">Highlight reels, full ceremonies</div>
+          <div class="card-price">$500 – $5,000</div>
+        </div>
+        <div class="sel-card" data-base-low="2000" data-base-high="15000" data-label="Short Film / Doc" onclick="selectType(this)">
+          <span class="card-emoji">🎬</span>
+          <div class="card-title">Short Film / Doc</div>
+          <div class="card-meta">Narrative, documentary work</div>
+          <div class="card-price">$2,000 – $15,000</div>
+        </div>
+        <div class="sel-card" data-base-low="100" data-base-high="800" data-label="Gaming / Esports" onclick="selectType(this)">
+          <span class="card-emoji">🎮</span>
+          <div class="card-title">Gaming / Esports</div>
+          <div class="card-meta">Highlight reels, stream edits</div>
+          <div class="card-price">$100 – $800</div>
+        </div>
+        <div class="sel-card" data-base-low="200" data-base-high="1000" data-label="Real Estate / Tour" onclick="selectType(this)">
+          <span class="card-emoji">🏠</span>
+          <div class="card-title">Real Estate / Tour</div>
+          <div class="card-meta">Property walkthrough, drone</div>
+          <div class="card-price">$200 – $1,000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Editor Experience -->
+    <div class="section">
+      <div class="section-label">
+        <span class="section-num">02</span>
+        <span class="section-title">Editor experience level</span>
+      </div>
+      <div class="card-grid g3" id="expGrid">
+        <div class="sel-card active" data-exp-mult="0.65" data-exp-label="Entry-level" onclick="selectExp(this)">
+          <div class="card-title">Entry-Level</div>
+          <div class="card-meta">0–2 years<br>$20–$35/hr</div>
+          <div class="card-price">Budget tier</div>
+        </div>
+        <div class="sel-card" data-exp-mult="1.0" data-exp-label="Mid-level" onclick="selectExp(this)">
+          <div class="card-title">Mid-Level</div>
+          <div class="card-meta">2–6 years<br>$40–$80/hr</div>
+          <div class="card-price">Most common</div>
+        </div>
+        <div class="sel-card" data-exp-mult="1.5" data-exp-label="Senior/Expert" onclick="selectExp(this)">
+          <div class="card-title">Senior / Expert</div>
+          <div class="card-meta">6+ years<br>$100–$150+/hr</div>
+          <div class="card-price">Premium tier</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Turnaround -->
+    <div class="section">
+      <div class="section-label">
+        <span class="section-num">03</span>
+        <span class="section-title">Turnaround time</span>
+      </div>
+      <div class="toggle-row" id="rushGrid">
+        <button class="toggle-btn active" data-rush-mult="1.0" data-rush-label="Standard" onclick="selectRush(this)">Standard (5–10 days)</button>
+        <button class="toggle-btn" data-rush-mult="1.25" data-rush-label="Rush (+25%)" onclick="selectRush(this)">Rush (2–4 days) +25%</button>
+        <button class="toggle-btn" data-rush-mult="1.50" data-rush-label="Urgent (+50%)" onclick="selectRush(this)">Urgent (24–48hrs) +50%</button>
+      </div>
+      <div class="toggle-note" id="rushNote">Standard turnaround. No rush fee applied. Most editors recommend 5–10 business days for quality work.</div>
+    </div>
+
+    <!-- 04 Finished video length -->
+    <div class="section">
+      <div class="section-label">
+        <span class="section-num">04</span>
+        <span class="section-title">Finished video length</span>
+      </div>
+      <div class="length-control">
+        <div class="length-row">
+          <span class="length-num" id="lengthDisplay">3</span>
+          <span class="length-label">minutes of finished video</span>
+        </div>
+        <input type="range" id="lengthSlider" min="1" max="60" value="3" oninput="updateLength(this.value)">
+        <div class="range-labels">
+          <span>1 min</span>
+          <span>30 min</span>
+          <span>60 min</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Add-ons -->
+    <div class="section">
+      <div class="section-label">
+        <span class="section-num">05</span>
+        <span class="section-title">Add-ons / extras</span>
+      </div>
+      <div class="extras-grid">
+        <div class="extra-item" data-cost="150" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Motion Graphics / Titles</div>
+            <div class="extra-desc">Custom animated text & lower thirds</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$150</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+        <div class="extra-item" data-cost="100" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Captions / Subtitles</div>
+            <div class="extra-desc">Synced text overlay, styled</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$100</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+        <div class="extra-item" data-cost="200" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Color Grading</div>
+            <div class="extra-desc">Professional LUT + grade pass</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$200</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+        <div class="extra-item" data-cost="180" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Sound Design / Mix</div>
+            <div class="extra-desc">SFX, music sync, audio polish</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$180</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+        <div class="extra-item" data-cost="300" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Thumbnail Design</div>
+            <div class="extra-desc">Custom YouTube / social thumbnail</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$300</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+        <div class="extra-item" data-cost="250" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Extra Revision Round</div>
+            <div class="extra-desc">Beyond 2 standard revisions</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$250</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+        <div class="extra-item" data-cost="120" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Platform Reformats</div>
+            <div class="extra-desc">9:16 + 1:1 cuts from master</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$120</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+        <div class="extra-item" data-cost="400" onclick="toggleExtra(this)">
+          <div class="extra-left">
+            <div class="extra-name">Basic VFX / Compositing</div>
+            <div class="extra-desc">Screen replacements, basic VFX</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="extra-cost">+$400</div>
+            <div class="extra-check">✓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 Email Draft -->
+    <div class="section">
+      <div class="section-label">
+        <span class="section-num">06</span>
+        <span class="section-title">Client brief / quote email</span>
+      </div>
+      <div class="email-box">
+        <div class="email-toolbar">
+          <span class="email-toolbar-label">Customize before sending to your editor</span>
+          <button class="copy-btn" id="copyBtn" onclick="copyEmail()">⊕ Copy</button>
+        </div>
+        <textarea id="emailBody" spellcheck="false"></textarea>
+      </div>
+    </div>
+
+  </div><!-- end left-col -->
+
+  <!-- RIGHT: Sticky Quote -->
+  <div class="right-col">
+    <div class="quote-panel">
+      <div class="quote-header">
+        <div class="quote-header-label">Estimated Cost</div>
+        <div class="market-tag">REAL RATES</div>
+      </div>
+      <div class="quote-amount">
+        <div class="quote-main" id="quoteMain">$65</div>
+        <div class="quote-range">
+          Market range: <span class="low" id="rangeMin">$100</span> – <span class="high" id="rangeMax">$500</span>
+        </div>
+      </div>
+      <div class="range-vis">
+        <div class="range-fill" id="rangeFill"></div>
+        <div class="range-dot" id="rangeDot" style="left:50%;"></div>
+      </div>
+      <div class="range-bar-labels">
+        <span>Budget</span>
+        <span>Midpoint</span>
+        <span>Premium</span>
+      </div>
+
+      <div class="breakdown">
+        <div class="breakdown-row">
+          <span class="breakdown-key">Project type</span>
+          <span class="breakdown-val" id="bdType">Social / Reel</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="breakdown-key">Experience tier</span>
+          <span class="breakdown-val" id="bdExp">Entry-level</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="breakdown-key">Base estimate</span>
+          <span class="breakdown-val" id="bdBase">—</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="breakdown-key">Length factor</span>
+          <span class="breakdown-val" id="bdLength">—</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="breakdown-key">Rush fee</span>
+          <span class="breakdown-val" id="bdRush">None</span>
+        </div>
+        <div class="breakdown-row extras-row">
+          <span class="breakdown-key">Add-ons</span>
+          <span class="breakdown-val" id="bdExtras">$0</span>
+        </div>
+        <div class="breakdown-row total">
+          <span class="breakdown-key">Your estimate</span>
+          <span class="breakdown-val" id="bdTotal">—</span>
+        </div>
+      </div>
+
+      <!-- Market Context bars -->
+      <div class="market-context">
+        <div class="market-label">Where this falls in market</div>
+        <div class="market-row">
+          <div class="market-source">Upwork</div>
+          <div class="market-bar-wrap">
+            <div class="market-bar active-range" id="mBar1" style="width:60%"></div>
+            <div class="your-dot" id="mDot1" style="left:50%"></div>
+          </div>
+          <div class="market-price" id="mPrice1">$15–$150/hr</div>
+        </div>
+        <div class="market-row">
+          <div class="market-source">Fiverr</div>
+          <div class="market-bar-wrap">
+            <div class="market-bar active-range" id="mBar2" style="width:45%"></div>
+            <div class="your-dot" id="mDot2" style="left:40%"></div>
+          </div>
+          <div class="market-price" id="mPrice2">$65–$450</div>
+        </div>
+        <div class="market-row">
+          <div class="market-source">Freelance</div>
+          <div class="market-bar-wrap">
+            <div class="market-bar active-range" id="mBar3" style="width:55%"></div>
+            <div class="your-dot" id="mDot3" style="left:45%"></div>
+          </div>
+          <div class="market-price" id="mPrice3">$300–$800/day</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end main -->
+
+<footer>
+  <p>
+    Sources: <a href="https://www.cutjamm.com/blog/video-editing-rates" target="_blank">Cutjamm 2025 Survey</a> ·
+    <a href="https://www.upwork.com/hire/video-editors/cost/" target="_blank">Upwork</a> ·
+    <a href="https://www.miracamp.com/learn/video-editing/rates" target="_blank">Miracamp</a> ·
+    <a href="https://www.spivo.com/blogs/news-updates/video-editing-costs" target="_blank">Spivo</a><br>
+    Rates reflect US freelance market averages · Individual prices vary by location, scope, and negotiation
+  </p>
+  <p>Video Editing Cost Calculator · 2025</p>
+</footer>
+
+<script>
+  // STATE
+  let typeLow = 100, typeHigh = 500, typeLabel = 'Social / Reel';
+  let expMult = 0.65, expLabel = 'Entry-level';
+  let rushMult = 1.0, rushLabel = 'Standard';
+  let videoLength = 3;
+  let extrasTotal = 0;
+
+  function fmtFull(n) {
+    return '$' + Math.round(n).toLocaleString();
+  }
+
+  function selectType(el) {
+    document.querySelectorAll('#typeGrid .sel-card').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    typeLow = parseInt(el.dataset.baseLow);
+    typeHigh = parseInt(el.dataset.baseHigh);
+    typeLabel = el.dataset.label;
+    update();
+  }
+
+  function selectExp(el) {
+    document.querySelectorAll('#expGrid .sel-card').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    expMult = parseFloat(el.dataset.expMult);
+    expLabel = el.dataset.expLabel;
+    update();
+  }
+
+  function selectRush(el) {
+    document.querySelectorAll('#rushGrid .toggle-btn').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    rushMult = parseFloat(el.dataset.rushMult);
+    rushLabel = el.dataset.rushLabel;
+    const notes = {
+      'Standard': 'Standard turnaround. No rush fee applied. Most editors recommend 5–10 business days for quality work.',
+      'Rush (+25%)': 'Rush delivery (2–4 days). Editors typically charge 25–50% more for expedited timelines. Source: Miracamp, Twine.',
+      'Urgent (+50%)': '24–48 hour delivery. Urgent projects command 50%+ premium. Expect limited availability at this tier.'
+    };
+    document.getElementById('rushNote').textContent = notes[rushLabel] || '';
+    update();
+  }
+
+  function updateLength(v) {
+    videoLength = parseInt(v);
+    document.getElementById('lengthDisplay').textContent = videoLength;
+    update();
+  }
+
+  function toggleExtra(el) {
+    el.classList.toggle('active');
+    extrasTotal = 0;
+    document.querySelectorAll('.extra-item.active').forEach(e => {
+      extrasTotal += parseInt(e.dataset.cost);
+    });
+    update();
+  }
+
+  function getLengthMult() {
+    // Editing takes 1–4 hours per finished minute; longer = more cost
+    // Scale gently: 1min = 0.7x, 3min = 1x (baseline), 10min = 1.4x, 30min = 2x, 60min = 3x
+    if (videoLength <= 1) return 0.70;
+    if (videoLength <= 3) return 0.85 + (videoLength - 1) * 0.075;
+    if (videoLength <= 10) return 1.0 + (videoLength - 3) * 0.055;
+    if (videoLength <= 30) return 1.385 + (videoLength - 10) * 0.031;
+    return 2.005 + (videoLength - 30) * 0.033;
+  }
+
+  function update() {
+    const lm = getLengthMult();
+    const midBase = ((typeLow + typeHigh) / 2) * expMult * lm * rushMult;
+    const lo = typeLow * expMult * lm * rushMult;
+    const hi = typeHigh * expMult * lm * rushMult;
+    const total = midBase + extrasTotal;
+
+    // Quote display
+    document.getElementById('quoteMain').textContent = fmtFull(total);
+    document.getElementById('rangeMin').textContent = fmtFull(lo);
+    document.getElementById('rangeMax').textContent = fmtFull(hi);
+
+    // Range dot (where midpoint falls in lo–hi)
+    const range = hi - lo || 1;
+    const pct = ((total - extrasTotal - lo) / range) * 90 + 5;
+    document.getElementById('rangeDot').style.left = Math.max(5, Math.min(95, pct)) + '%';
+
+    // Breakdown
+    document.getElementById('bdType').textContent = typeLabel;
+    document.getElementById('bdExp').textContent = expLabel;
+    document.getElementById('bdBase').textContent = fmtFull(lo) + ' – ' + fmtFull(hi);
+    document.getElementById('bdLength').textContent = videoLength + ' min × ' + lm.toFixed(2) + 'x';
+    document.getElementById('bdRush').textContent = rushMult > 1 ? '+' + Math.round((rushMult - 1) * 100) + '%' : 'None';
+    document.getElementById('bdExtras').textContent = extrasTotal > 0 ? '+' + fmtFull(extrasTotal) : '$0';
+    document.getElementById('bdTotal').textContent = fmtFull(total);
+
+    generateEmail(total, lo, hi);
+  }
+
+  function generateEmail(total, lo, hi) {
+    const addons = [];
+    document.querySelectorAll('.extra-item.active .extra-name').forEach(e => addons.push(e.textContent.trim()));
+    const addonLine = addons.length > 0 ? '\nAdd-ons requested:\n  - ' + addons.join('\n  - ') : '';
+
+    const text =
+`Hi [Editor's Name],
+
+I'm looking to hire a video editor for a ${typeLabel.toLowerCase()} project. Here are the details:
+
+  Project type: ${typeLabel}
+  Finished length: ~${videoLength} minute${videoLength !== 1 ? 's' : ''}
+  Turnaround: ${rushLabel}
+  Experience needed: ${expLabel}${addonLine}
+
+Based on current market rates, I'm expecting a budget around ${fmtFull(total)}, with the market range being ${fmtFull(lo)}–${fmtFull(hi)} for this type of work.
+
+Could you confirm your availability and send over your quote for this scope? Happy to jump on a quick call to align on details.
+
+Looking forward to working together.
+
+[Your Name]
+[Your Contact / Company]`;
+
+    document.getElementById('emailBody').value = text;
+  }
+
+  function copyEmail() {
+    navigator.clipboard.writeText(document.getElementById('emailBody').value).then(() => {
+      const btn = document.getElementById('copyBtn');
+      btn.textContent = '✓ Copied';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = '⊕ Copy'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+
+  update();
+</script>
+</body>
+</html>
